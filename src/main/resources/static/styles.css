@@ -1,0 +1,18 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+div.ingredient-group div label{
+    display: block
+}
+
+div.ingredient-group div label:hover{
+    background:#eee;
+    cursor:pointer;
+}
+
+img{
+    height: 100px;
+}
