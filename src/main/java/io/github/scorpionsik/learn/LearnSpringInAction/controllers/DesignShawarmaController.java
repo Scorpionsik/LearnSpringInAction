@@ -5,10 +5,7 @@ import io.github.scorpionsik.learn.LearnSpringInAction.models.Shawarma;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 import io.github.scorpionsik.learn.LearnSpringInAction.models.Ingredient.Type;
 
 import java.util.Arrays;
@@ -57,6 +54,12 @@ public class DesignShawarmaController {
     public String showDesignForm(Model model){
         model.addAttribute("shawarma", new Shawarma());
         return "design";
+    }
+
+    @PostMapping
+    public String processShawarma(Shawarma shawarma){
+        log.info("Processing shawarma: " + shawarma);
+        return "redirect:/orders/current";
     }
 
     private Iterable<Ingredient> filterByType(List<Ingredient> ingredients, Type type){
