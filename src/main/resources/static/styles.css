@@ -16,3 +16,7 @@ div.ingredient-group div label:hover{
 img{
     height: 100px;
 }
+
+.validation-error{
+    color: red;
+}

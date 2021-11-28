@@ -5,9 +5,11 @@ import io.github.scorpionsik.learn.LearnSpringInAction.models.Shawarma;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import io.github.scorpionsik.learn.LearnSpringInAction.models.Ingredient.Type;
 
+import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -57,7 +59,10 @@ public class DesignShawarmaController {
     }
 
     @PostMapping
-    public String processShawarma(Shawarma shawarma){
+    public String processShawarma(@Valid @ModelAttribute("shawarma") Shawarma shawarma, Errors errors){
+        if(errors.hasErrors()) return "design";
+
+        //save
         log.info("Processing shawarma: " + shawarma);
         return "redirect:/orders/current";
     }

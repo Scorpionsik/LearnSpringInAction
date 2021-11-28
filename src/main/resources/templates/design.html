@@ -12,6 +12,9 @@
     <img th:src="@{/images/logo.png}"/>
 
     <form method="post" th:object="${shawarma}">
+         <span class="validation-error"
+               th:if="${#fields.hasErrors('ingredients')}"
+               th:errors="*{ingredients}">error</span>
         <div class="grid">
             <div class="ingredient-group" id="wraps">
                 <h3>Designate your wrap:</h3>
@@ -67,6 +70,9 @@
         <div>
             <h3>Name your beautiful shawarma:</h3>
             <input type="text" th:field="*{name}"/>
+            <span class="validation-error"
+                  th:if="${#fields.hasErrors('name')}"
+                  th:errors="*{name}">error</span>
             <button>Submit Your Shawarma</button>
         </div>
     </form>
