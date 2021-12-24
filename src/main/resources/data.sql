@@ -1,0 +1,23 @@
+delete from Ingredient_Ref;
+delete from Shawarma;
+delete from Shawarma_Order;
+delete from Ingredient;
+
+insert into Ingredient (id, name, type) values ('FLPT', 'Flour Pita', 'WRAP');
+insert into Ingredient (id, name, type) values ('HOPT', 'Hot Chilli Pita', 'WRAP');
+insert into Ingredient (id, name, type) values ('CHPT', 'Cheese Pita', 'WRAP');
+insert into Ingredient (id, name, type) values ('RSLB', 'Roast Lamb', 'PROTEIN');
+insert into Ingredient (id, name, type) values ('RSBR', 'Roast Beef', 'PROTEIN');
+insert into Ingredient (id, name, type) values ('RSCK', 'Roast Chicken', 'PROTEIN');
+insert into Ingredient (id, name, type) values ('TMTO', 'Diced Tomatoes', 'VEGGIES');
+insert into Ingredient (id, name, type) values ('CALE', 'Cabbage Leaves', 'VEGGIES');
+insert into Ingredient (id, name, type) values ('CUCM', 'Sliced Cucumbers', 'VEGGIES');
+insert into Ingredient (id, name, type) values ('POTS', 'Baked Diced Potatoes', 'VEGGIES');
+insert into Ingredient (id, name, type) values ('RUCH', 'Russian', 'CHEESE');
+insert into Ingredient (id, name, type) values ('DUCH', 'Dutch', 'CHEESE');
+insert into Ingredient (id, name, type) values ('SULG', 'Sulguni', 'CHEESE');
+insert into Ingredient (id, name, type) values ('KETC', 'Ketchup', 'SAUCE');
+insert into Ingredient (id, name, type) values ('MASE', 'Mayonnaise', 'SAUCE');
+insert into Ingredient (id, name, type) values ('KESE', 'Ketchunaise', 'SAUCE');
+insert into Ingredient (id, name, type) values ('GARL', 'Garlic Sauce', 'SAUCE');
+insert into Ingredient (id, name, type) values ('AJKA', 'Adjika', 'SAUCE');
