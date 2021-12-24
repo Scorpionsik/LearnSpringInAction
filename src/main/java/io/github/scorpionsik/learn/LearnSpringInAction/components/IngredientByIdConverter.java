@@ -1,6 +1,6 @@
 package io.github.scorpionsik.learn.LearnSpringInAction.components;
 
-import io.github.scorpionsik.learn.LearnSpringInAction.repositiries.IngredientRepository;
+import io.github.scorpionsik.learn.LearnSpringInAction.repositiries.i.IngredientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import io.github.scorpionsik.learn.LearnSpringInAction.models.Ingredient;

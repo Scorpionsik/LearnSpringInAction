@@ -2,7 +2,7 @@ package io.github.scorpionsik.learn.LearnSpringInAction.controllers;
 
 import io.github.scorpionsik.learn.LearnSpringInAction.models.Ingredient;
 import io.github.scorpionsik.learn.LearnSpringInAction.models.Shawarma;
-import io.github.scorpionsik.learn.LearnSpringInAction.repositiries.IngredientRepository;
+import io.github.scorpionsik.learn.LearnSpringInAction.repositiries.i.IngredientRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
