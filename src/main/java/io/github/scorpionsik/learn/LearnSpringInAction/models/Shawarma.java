@@ -1,5 +1,6 @@
 package io.github.scorpionsik.learn.LearnSpringInAction.models;
 
+import io.github.scorpionsik.learn.LearnSpringInAction.components.IngredientRef;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
@@ -19,5 +20,5 @@ public class Shawarma {
 
     @NotNull
     @Size(min=1, message = "You must choose at least 1 ingredient")
-    private List<Ingredient> ingredients;
+    private List<IngredientRef> ingredients;
 }
