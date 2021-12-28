@@ -1,7 +1,7 @@
 package io.github.scorpionsik.learn.LearnSpringInAction.controllers;
 
 import io.github.scorpionsik.learn.LearnSpringInAction.models.ShawarmaOrder;
-import io.github.scorpionsik.learn.LearnSpringInAction.repositiries.i.OrderRepository;
+import io.github.scorpionsik.learn.LearnSpringInAction.repositiries.OrderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +9,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Date;
 
 @Slf4j
 @Controller
@@ -31,6 +32,7 @@ public class OrderController {
         if(errors.hasErrors()) return "orderForm";
 
         //save
+        order.setPlacedAt(new Date());
         orderRepository.save(order);
         log.info("Order submitted: " + order);
         return "redirect:/";
